@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'League Spartan';
-  src: url('/assets/LeagueSpartanVariable.woff2') format('woff2');
+  src: url('assets/LeagueSpartanVariable.woff2') format('woff2');
 }
 
 /* Box sizing rules */
@@ -45,7 +45,7 @@ body {
   background-color: #121212;
   width: 100%;
   height: 100%;
-  display: grid;
+  /* display: grid; */
   grid-template: 1fr 70% / 1fr 3fr;
 }
 
