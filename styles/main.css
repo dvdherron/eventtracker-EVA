@@ -1,0 +1,206 @@
+@font-face {
+  font-family: 'League Spartan';
+  src: url('/assets/LeagueSpartanVariable.woff2') format('woff2');
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+body {
+  font-family: 'League Spartan','Segoe UI', Tahoma, sans-serif;
+  font-variation-settings: 'wght' 689;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: #121212;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 1fr 70% / 1fr 3fr;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+=============================================================
+
+=============================================================
+*/
+
+
+
+.page__header {
+  background: #121212;
+  color: white;
+  height: auto;
+  grid-column-start: 2 / span 1;
+  grid-row-start: 1 / span 1;
+}
+
+.header__bar {
+  background-color: #d16d26;
+  height: calc(8px + .5vw);
+}
+
+.page__header-title {
+  line-height: .5;
+  display: inline-block;
+  width: 100%;
+  font-size: calc(6em + 3vw);
+  font-family: 'League Spartan','Segoe UI', Tahoma, sans-serif;
+  font-variation-settings: 'wght' 772;
+}
+
+.header__word {
+  width: 100%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+#word--first {
+  line-height: 82%;
+}
+
+#bar--first,
+#bar--fourth
+ {
+  flex: 2 0 30vw;
+}
+
+#bar--third,
+#bar--second {
+  flex: 2 0 5vw;
+}
+
+
+/* CSS for the band list */
+
+.band-section {
+  margin: auto;
+  margin-top: 3vw;
+  margin-bottom: 3vw;
+  display: grid;
+  grid-column-start: 2 / span 1;
+  grid-row-start: 2 / span 1;
+}
+
+.band-section ul {
+  font-size: 30px;
+  list-style-type: none;
+  margin: auto;
+  text-align: center;
+  width: 60%;
+}
+
+.band-section ul li {
+  padding: 0.7em 0.5em 0.2em 0.5em;
+  font-weight: 600;
+  color: #eee;
+}
+
+.band-section ul li p {
+  font-size: 25px;
+  margin: 0 .2em 2px .2em;
+  font-weight: 400;
+  font-style: italic;
+  color: #eee;
+  background: /* making gradient underlines */
+   linear-gradient(
+     to left,
+     #121212 0%,
+     #FFAB6D 30%,
+     #FFAB6D 60%,
+     #121212 100%
+   )
+   left
+   bottom
+   #121212
+   no-repeat;
+   background-size: 100% 2px ; /*Setting the height of the lines, and a 100% width so it fills up its container*/
+}
+
+.photo {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-column-start: 1 / span 1;
+  grid-row: 1 / 3;
+  background-image: url('colourlessConcertMid.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.band-item a {
+  text-decoration: none;
+  color: #eee;
+  -webkit-transition: color 0.3s ease-out;
+  -moz-transition: color 0.3s ease-out;
+  -o-transition: color 0.3s ease-out;
+  transition: color 0.3s ease-out;
+}
+
+.band-item a:hover {
+  color: #ffc9a3;
+}
+/* Band list CSS ends*/
