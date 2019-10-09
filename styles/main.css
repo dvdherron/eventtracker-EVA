@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'League Spartan';
-  src: url('assets/LeagueSpartanVariable.woff2') format('woff2');
+  src: url('/styles/LeagueSpartanVariable.woff2') format('woff2');
 }
 
 /* Box sizing rules */
@@ -36,15 +36,16 @@ dd {
 
 /* Set core body defaults */
 body {
-  font-family: 'League Spartan','Segoe UI', Tahoma, sans-serif;
-  font-variation-settings: 'wght' 689;
+  /* font-family: 'League Spartan','Segoe UI', Tahoma, sans-serif;
+  font-variation-settings: 'wght' 689; */
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   background-color: #121212;
-  width: 100%;
-  height: 100%;
+  /* width: 100%; */
+  height: 100vh;
+  overflow-x: hidden;
   /* display: grid; */
   grid-template: 1fr 70% / 1fr 3fr;
 }
@@ -126,9 +127,21 @@ select {
   flex: 2 0 30vw;
 }
 
+#bar--first {
+  margin-right: .5rem;
+}
+
 #bar--third,
 #bar--second {
   flex: 2 0 5vw;
+}
+
+#bar-second {
+  margin-right: ;
+}
+
+#bar--third {
+  margin-left: .5rem;
 }
 
 
