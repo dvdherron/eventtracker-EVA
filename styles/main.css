@@ -48,6 +48,9 @@ body {
   overflow-x: hidden;
   /* display: grid; */
   grid-template: 1fr 70% / 1fr 3fr;
+  display: grid;
+  grid-template: 1fr 70% / 1fr 60%;
+  overflow-x: hidden;
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
@@ -91,9 +94,8 @@ select {
 .page__header {
   background: #121212;
   color: white;
-  height: auto;
-  grid-column-start: 2 / span 1;
-  grid-row-start: 1 / span 1;
+  grid-column: 2 / span 1;
+  grid-row: 1 / span 1;
 }
 
 .header__bar {
@@ -103,8 +105,6 @@ select {
 
 .page__header-title {
   line-height: .5;
-  display: inline-block;
-  width: 100%;
   font-size: calc(6em + 3vw);
   font-family: 'League Spartan','Segoe UI', Tahoma, sans-serif;
   font-variation-settings: 'wght' 772;
@@ -117,9 +117,6 @@ select {
   align-items: center;
 }
 
-#word--first {
-  line-height: 82%;
-}
 
 #bar--first,
 #bar--fourth
@@ -149,11 +146,11 @@ select {
 
 .band-section {
   margin: auto;
-  margin-top: 3vw;
   margin-bottom: 3vw;
-  display: grid;
-  grid-column-start: 2 / span 1;
-  grid-row-start: 2 / span 1;
+  position: relative;
+  grid-column: 2 / span 1;
+  grid-row: 2 / span 1;
+  display: flex;
 }
 
 .band-section ul {
@@ -164,15 +161,10 @@ select {
   width: 60%;
 }
 
-.band-section ul li {
-  padding: 0.7em 0.5em 0.2em 0.5em;
-  font-weight: 600;
-  color: #eee;
-}
 
 .band-section ul li p {
   font-size: 25px;
-  margin: 0 .2em 2px .2em;
+  margin: 0 .2em .2em .2em;
   font-weight: 400;
   font-style: italic;
   color: #eee;
@@ -191,17 +183,67 @@ select {
    background-size: 100% 2px ; /*Setting the height of the lines, and a 100% width so it fills up its container*/
 }
 
+.band-item {
+  height: 10vh;
+  padding: .2em .2em .2em .2em;
+  padding: 0.7em 0.5em 0.2em 0.5em;
+  font-weight: 600;
+  color: #eee;
+  min-height: 50px;
+  display: inline
+}
+
 .photo {
-  margin: 0;
-  height: 100vh;
   display: grid;
-  grid-column-start: 1 / span 1;
+  grid-column: 1 / span 1;
   grid-row: 1 / 3;
   background-image: url('colourlessConcertMid.png');
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+}
 
+.city__box {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  margin-right: auto;
+  margin-bottom: 1.5vw;
+  position: relative;
+  width: 100%;
+  top: 80%;
+  height: 15vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: .7vw;
+  line-height: .5;
+}
+
+#city--line {
+  width: 50%;
+  height: 1.7vh;
+  background-color: #d16d26;
+  border: none;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: #eee;
+  border: none;
+  border-bottom: 2px solid #eee;
+  font-size: 30px;
+}
+
+.city__box p, .city__box h1 {
+  color: #eee;
+  display: block;
+}
+
+.city__box p {
+  font-size: 25px;
+}
+
+.city__box h1 {
+  font-size: 40px;
+  float: center;
 }
 
 .band-item a {
@@ -217,3 +259,4 @@ select {
   color: #ffc9a3;
 }
 /* Band list CSS ends*/
+/* This is a test change*/
